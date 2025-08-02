@@ -33,10 +33,13 @@ Bu proje, müşteri ilişkileri yönetimini kolaylaştırmak için geliştirilmi
 - Kullanıcı ve takım bazlı başarı sıralamaları
 - Performans kıyaslaması
 
-## 🧪 Teknolojiler
-- Frontend: (Belirtilmemiş ama modern UI)
-- Backend: (Varsa bilgi eklenmeli)
-- Dil: Almanca
+## 🛠️ Teknolojiler
+
+| Katman     | Teknoloji                 |
+|------------|---------------------------|
+| Frontend   | [Next.js](https://nextjs.org), [shadcn/ui](https://ui.shadcn.com) |
+| Backend    | [PocketBase](https://pocketbase.io) (veritabanı ve API) |
+| UI Dili    | Almanca (varsayılan)      |
 
 ## 📂 Kurulum
 ```bash

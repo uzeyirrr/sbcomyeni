@@ -25,14 +25,20 @@ Bu proje, müşteri ilişkileri yönetimini kolaylaştırmak için geliştirilmi
 - Nihai kalite kontrol (Final-QC)
 - Statü bazlı müşteri dağılımı ve analizler
 
+  
+ ![1752252916145](https://github.com/user-attachments/assets/9a7ab468-5271-44ec-abd3-f2e328728249)
+
+
 ### 📅 Takvim & Slot Yönetimi
 - Müşteri görüşmeleri için zaman dilimlerinin tanımlanması
 - Slot rezervasyon ve takibi
 
+  
+![1752252916229](https://github.com/user-attachments/assets/6da56c86-b047-4b70-bd00-545a81b6862c)
+
 ### 🏆 Sıralamalar
 - Kullanıcı ve takım bazlı başarı sıralamaları
 - Performans kıyaslaması
-
 ## 🛠️ Teknolojiler
 
 | Katman     | Teknoloji                 |

@@ -1,0 +1,15 @@
+{
+  "name": "crm-app",
+  "bin": "exe-start.js",
+  "pkg": {
+    "assets": [
+      ".next/**/*",
+      "public/**/*",
+      "node_modules/**/*"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "dist"
+  }
+}

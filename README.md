@@ -41,11 +41,17 @@ Bu proje, müşteri ilişkileri yönetimini kolaylaştırmak için geliştirilmi
 - Performans kıyaslaması
 ## 🛠️ Teknolojiler
 
-| Katman     | Teknoloji                 |
-|------------|---------------------------|
-| Frontend   | [Next.js](https://nextjs.org), [shadcn/ui](https://ui.shadcn.com) |
-| Backend    | [PocketBase](https://pocketbase.io) (veritabanı ve API) |
-| UI Dili    | Almanca (varsayılan)      |
+## 🛠 Teknoloji Yığını
+
+| Alan      | Teknolojiler |
+|-----------|-------------|
+| Frontend  | Next.js 15, React 19, Tailwind CSS 4, shadcn/ui |
+| Backend   | PocketBase (veritabanı + API) |
+| UI Kit    | Radix UI, lucide-react ikon seti |
+| State/Form | React Hook Form, Zod |
+| Drag & Drop | dnd-kit, hello-pangea/dnd |
+| Doküman   | jsPDF, docx |
+| Tarih     | date-fns, react-day-picker |
 
 ## 📂 Kurulum
 ```bash

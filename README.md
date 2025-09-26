@@ -1,61 +1,60 @@
-# CRM-System
+# CRM System
 
-Bu proje, müşteri ilişkileri yönetimini kolaylaştırmak için geliştirilmiş modern bir CRM sistemidir. Takım bazlı analiz, kullanıcı performans ölçümü ve kalite kontrol süreçlerini entegre şekilde sunar.
+This project is a modern CRM system developed to facilitate customer relationship management. It provides integrated team-based analysis, user performance measurement, and quality control processes.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-### 📊 Dashboard (Genel Bakış)
-- Toplam müşteri, kullanıcı ve takım sayıları
-- Kullanıcı başına ortalama müşteri oranı
-- Müşteri analizleri (ön kalite kontrol durumları: Aranacak, Rausgefallen WP, Yeni)
-- Son eklenen müşterilerin durumu
-- En iyi kullanıcılar ve takımlar listesi
+### 📊 Dashboard (Overview)
+- Total customers, users, and teams count
+- Average customer ratio per user
+- Customer analyses (pre-quality control statuses: To Call, Rausgefallen WP, New)
+- Status of recently added customers
+- Best users and teams list
 
-### 👥 Kullanıcı ve Takım Yönetimi
-- Yeni kullanıcılar ve takımlar oluşturulabilir
-- Kullanıcı başına atanan müşterilerin takibi
-- Takım liderliği ve performans takibi
+### 👥 User and Team Management
+- New users and teams can be created
+- Tracking of customers assigned per user
+- Team leadership and performance tracking
 
-### 📞 Müşteri Yönetimi
-- Müşteri durumlarının (örneğin aranacak, yeni, elenen) takibi
-- Randevu kategorileri ve slot yönetimi
+### 📞 Customer Management
+- Tracking of customer statuses (e.g., to call, new, eliminated)
+- Appointment categories and slot management
 
-### ✅ Kalite Kontrol Süreci
-- Ön kalite kontrol (Vor-QC)
-- Nihai kalite kontrol (Final-QC)
-- Statü bazlı müşteri dağılımı ve analizler
+### ✅ Quality Control Process
+- Pre-quality control (Vor-QC)
+- Final quality control (Final-QC)
+- Status-based customer distribution and analyses
 
   
  ![1752252916145](https://github.com/user-attachments/assets/9a7ab468-5271-44ec-abd3-f2e328728249)
 
 
-### 📅 Takvim & Slot Yönetimi
-- Müşteri görüşmeleri için zaman dilimlerinin tanımlanması
-- Slot rezervasyon ve takibi
+### 📅 Calendar & Slot Management
+- Defining time slots for customer meetings
+- Slot reservation and tracking
 
   
 ![1752252916229](https://github.com/user-attachments/assets/6da56c86-b047-4b70-bd00-545a81b6862c)
 
-### 🏆 Sıralamalar
-- Kullanıcı ve takım bazlı başarı sıralamaları
-- Performans kıyaslaması
-## 🛠️ Teknolojiler
+### 🏆 Rankings
+- User and team-based success rankings
+- Performance comparison
 
-## 🛠 Teknoloji Yığını
+## 🛠️ Technology Stack
 
-| Alan      | Teknolojiler |
+| Area      | Technologies |
 |-----------|-------------|
 | Frontend  | Next.js 15, React 19, Tailwind CSS 4, shadcn/ui |
-| Backend   | PocketBase (veritabanı + API) |
-| UI Kit    | Radix UI, lucide-react ikon seti |
+| Backend   | PocketBase (database + API) |
+| UI Kit    | Radix UI, lucide-react icon set |
 | State/Form | React Hook Form, Zod |
 | Drag & Drop | dnd-kit, hello-pangea/dnd |
-| Doküman   | jsPDF, docx |
-| Tarih     | date-fns, react-day-picker |
+| Documents | jsPDF, docx |
+| Date     | date-fns, react-day-picker |
 
-## 📂 Kurulum
+## 📂 Installation
 ```bash
 git clone https://github.com/uzeyirrr/sbcomyeni.git
 cd sbcomyeni
-npm install # veya yarn
-npm run dev # geliştirme ortamı
+npm install # or yarn
+npm run dev # development environment

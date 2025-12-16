@@ -1,7 +1,7 @@
 import PocketBase from 'pocketbase';
 
 // PocketBase sunucu bağlantısı
-export const pb = new PocketBase('http://dental-price-pocketbase-defee1-37-148-207-162.traefik.me/');
+export const pb = new PocketBase('https://sbcomapi.yezuri.com/');
 
 // Otomatik istek iptalini devre dışı bırak
 pb.autoCancellation(false);

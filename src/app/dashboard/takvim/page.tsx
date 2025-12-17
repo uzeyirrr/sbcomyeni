@@ -33,6 +33,7 @@ import {
 import { CustomerForm } from "@/components/customers/customer-form";
 import { AppointmentSlot, getAppointmentSlots, Appointment, assignCustomerToAppointment, updateAppointment, approveAppointment } from "@/lib/appointment-slot-service";
 import { getAppointmentCategories, AppointmentCategory } from "@/lib/appointment-category-service";
+import { getLatestCustomers } from "@/lib/customer-service";
 import { pb } from "@/lib/pocketbase";
 import { useAuth } from "@/hooks/use-auth";
 import { DndContext, DragEndEvent, useSensor, useSensors, PointerSensor, useDraggable, useDroppable, DragOverlay, DragStartEvent } from "@dnd-kit/core";
@@ -154,10 +155,12 @@ export default function CalendarPage() {
   
   // States für den Kundenerstellungsdialog
   const [isCustomerDialogOpen, setIsCustomerDialogOpen] = useState(false);
+  const [isCreatingCustomer, setIsCreatingCustomer] = useState(false);
   const [selectedAppointment, setSelectedAppointment] = useState<Appointment | null>(null);
   const [collapsedSlots, setCollapsedSlots] = useState<Record<string, boolean>>({});
   const [activeCustomer, setActiveCustomer] = useState<any>(null);
   const [activeSlot, setActiveSlot] = useState<any>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   // Drag-and-Drop-Sensoren einstellen
   const sensors = useSensors(
@@ -319,14 +322,13 @@ export default function CalendarPage() {
     try {
       setIsCreatingCustomer(true);
       
-      // Kundenliste aktualisieren
-      const updatedCustomers = await getCustomers();
-      setCustomers(updatedCustomers);
+      // En son oluşturulan müşteriyi al
+      const latestCustomers = await getLatestCustomers(1);
       
       // Neuesten Kunden auswählen (erster Kunde in der Liste)
-      if (updatedCustomers.length > 0 && selectedAppointment) {
+      if (latestCustomers.length > 0 && selectedAppointment) {
         // Kunden dem Termin zuweisen
-        const result = await assignCustomerToAppointment(selectedAppointment.id, updatedCustomers[0].id);
+        const result = await assignCustomerToAppointment(selectedAppointment.id, latestCustomers[0].id);
         
         if (result) {
           // Termin genehmigen
@@ -406,6 +408,7 @@ export default function CalendarPage() {
 
   // Beim Start des Ziehens
   const handleDragStart = (event: DragStartEvent) => {
+    setIsDragging(true);
     const { active } = event;
     const dragType = (active.data?.current as any)?.type;
     

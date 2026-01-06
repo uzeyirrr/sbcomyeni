@@ -33,14 +33,18 @@ export default function LoginPage() {
       const authData = await pb.collection("users").authWithPassword(formData.email, formData.password);
 
       // Admin role check
-      if (authData.record.role !== "admin") {
-        // End session
-        pb.authStore.clear();
-        toast.error("Sie haben keine Berechtigung, auf diese Seite zuzugreifen.", {
-          description: "Nur Administratoren können sich anmelden."
-        });
-        return;
-      }
+if (
+  authData.record.role !== "admin" &&
+  authData.record.role !== "qcmanager" &&
+  authData.record.role !== "agent"
+) {
+  pb.authStore.clear();
+  toast.error("Sie haben keine Berechtigung, auf diese Seite zuzugreifen.", {
+    description: "Nur Administratoren, QC Manager und Agenten können sich anmelden."
+  });
+  return;
+}
+
 
       toast.success("Anmeldung erfolgreich!");
       router.push("/dashboard");
